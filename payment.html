@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدفع - صالة البدوي الرياضية</title>
+    <link rel="stylesheet" href="payment-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <a href="index.html" class="back-to-site">
+                <i class="fas fa-arrow-right"></i>
+                العودة إلى الموقع الرئيسي
+            </a>
+            
+            <section class="payment-section">
+                <h1 class="section-title">إتمام عملية الدفع</h1>
+                
+                <div class="payment-container">
+                    <div class="logo-container">
+                        <img src="logo.jpg" alt="شعار صالة البدوي" class="logo">
+                    </div>
+                    
+                    <!-- Progress Steps -->
+                    <div class="progress-steps">
+                        <div class="progress-bar" id="progress-bar"></div>
+                        <div class="progress-step">
+                            <div class="step-circle active">1</div>
+                            <div class="step-title active">تفاصيل الطلب</div>
+                        </div>
+                        <div class="progress-step">
+                            <div class="step-circle">2</div>
+                            <div class="step-title">طريقة الدفع</div>
+                        </div>
+                        <div class="progress-step">
+                            <div class="step-circle">3</div>
+                            <div class="step-title">التأكيد</div>
+                        </div>
+                    </div>
+                    
+                    <div class="security-badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <p>جميع المعاملات مشفرة ومؤمنة بواسطة SSL</p>
+                    </div>
+                    
+                    <div class="order-summary">
+                        <h3>ملخص الطلب</h3>
+                        <div class="plan-details">
+                            <div class="plan-name" id="plan-name">الاشتراك الشهري</div>
+                            <div class="plan-price" id="plan-price">500 جنيه مصري</div>
+                        </div>
+                    </div>
+                    
+                    <div class="payment-timer">
+                        <p>يرجى إكمال عملية الدفع خلال:</p>
+                        <span class="timer">15:00</span>
+                    </div>
+                    
+                    <div class="payment-methods">
+                        <h3>اختر طريقة الدفع</h3>
+                        <div class="payment-options">
+                            <div class="payment-option">
+                                <input type="radio" name="payment-method" id="credit-card" checked>
+                                <label for="credit-card">
+                                    <i class="fas fa-credit-card payment-method-icon"></i>
+                                    بطاقة ائتمان
+                                </label>
+                            </div>
+                            <div class="payment-option">
+                                <input type="radio" name="payment-method" id="vodafone-cash">
+                                <label for="vodafone-cash">
+                                    <i class="fas fa-mobile-alt payment-method-icon"></i>
+                                    فودافون كاش
+                                </label>
+                            </div>
+                            <div class="payment-option">
+                                <input type="radio" name="payment-method" id="fawry">
+                                <label for="fawry">
+                                    <i class="fas fa-store payment-method-icon"></i>
+                                    فوري
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Credit Card Form -->
+                    <div class="payment-form" id="credit-card-form">
+                        <h3>تفاصيل البطاقة</h3>
+                        
+                        <!-- Card Preview -->
+                        <div class="card-design">
+                            <div class="card-chip"></div>
+                            <div class="card-number" id="card-preview-number">**** **** **** ****</div>
+                            <div class="card-details">
+                                <div class="card-holder">
+                                    <div class="card-label">صاحب البطاقة</div>
+                                    <div class="card-value" id="card-preview-holder">اسم صاحب البطاقة</div>
+                                </div>
+                                <div class="card-expiry">
+                                    <div class="card-label">تاريخ الانتهاء</div>
+                                    <div class="card-value" id="card-preview-expiry">MM/YY</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <form id="payment-form">
+                            <div class="form-group">
+                                <label for="card-holder">اسم صاحب البطاقة</label>
+                                <input type="text" id="card-holder" placeholder="الاسم كما هو مكتوب على البطاقة">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="card-number">رقم البطاقة</label>
+                                <div class="card-input-container">
+                                    <div class="card-icons">
+                                        <i class="fab fa-cc-visa"></i>
+                                        <i class="fab fa-cc-mastercard"></i>
+                                    </div>
+                                    <input type="text" id="card-number" placeholder="**** **** **** ****">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group half">
+                                    <label for="expiry-date">تاريخ الانتهاء</label>
+                                    <input type="text" id="expiry-date" placeholder="MM/YY">
+                                </div>
+                                
+                                <div class="form-group half">
+                                    <label for="cvv">رمز الأمان (CVV)
+                                        <div class="cvv-info">
+                                            <div class="cvv-tooltip">
+                                                <i class="fas fa-question-circle"></i>
+                                                <span class="tooltip-text">رمز التحقق CVV هو رمز مكون من 3 أرقام موجود على ظهر بطاقتك</span>
+                                            </div>
+                                            <span>ما هو رمز CVV؟</span>
+                                        </div>
+                                    </label>
+                                    <input type="text" id="cvv" placeholder="***" maxlength="3">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group half">
+                                    <label for="email">البريد الإلكتروني</label>
+                                    <input type="email" id="email" placeholder="example@domain.com">
+                                </div>
+                                
+                                <div class="form-group half">
+                                    <label for="phone">رقم الهاتف</label>
+                                    <input type="tel" id="phone" placeholder="01xxxxxxxxx">
+                                </div>
+                            </div>
+                            
+                            <div class="card-security-info">
+                                <p><strong>معلومات أمان البطاقة:</strong></p>
+                                <ul>
+                                    <li>جميع معلومات بطاقتك مشفرة ومؤمنة بتقنية SSL 256-bit</li>
+                                    <li>لن يتم تخزين بيانات بطاقتك على خوادمنا</li>
+                                    <li>نستخدم أحدث تقنيات الحماية لضمان أمان معاملاتك</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="total-section">
+                                <div class="total-label">المبلغ الإجمالي:</div>
+                                <div class="total-amount" id="total-amount">500 جنيه مصري</div>
+                            </div>
+                            
+                            <div class="button-group">
+                                <button type="button" class="secondary-button" id="back-button">
+                                    <i class="fas fa-arrow-right"></i> رجوع
+                                </button>
+                                <button type="submit" class="cta-button pay-button">
+                                    <i class="fas fa-lock"></i> إتمام الدفع
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <!-- Vodafone Cash Form -->
+                    <div class="payment-form hidden" id="vodafone-cash-form">
+                        <h3>الدفع عبر فودافون كاش</h3>
+                        
+                        <div class="vodafone-instructions">
+                            <p>لإتمام الدفع عبر فودافون كاش، يرجى اتباع الخطوات التالية:</p>
+                            <ol>
+                                <li>قم بإدخال رقم هاتف فودافون كاش الخاص بك</li>
+                                <li>سيتم إرسال رمز تأكيد إلى هاتفك</li>
+                                <li>أدخل رمز التأكيد لإتمام عملية الدفع</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="vodafone-number">رقم فودافون كاش</label>
+                            <input type="tel" id="vodafone-number" placeholder="01xxxxxxxxx">
+                        </div>
+                        
+                        <div class="total-section">
+                            <div class="total-label">المبلغ الإجمالي:</div>
+                            <div class="total-amount" id="vodafone-amount">500 جنيه مصري</div>
+                        </div>
+                        
+                        <div class="button-group">
+                            <button type="button" class="secondary-button" id="vodafone-back-button">
+                                <i class="fas fa-arrow-right"></i> رجوع
+                            </button>
+                            <button class="cta-button pay-button">
+                                <i class="fas fa-mobile-alt"></i> تأكيد الدفع
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Fawry Form -->
+                    <div class="payment-form hidden" id="fawry-form">
+                        <h3>الدفع عبر فوري</h3>
+                        
+                        <div class="fawry-instructions">
+                            <p>لإتمام الدفع عبر فوري، يرجى اتباع الخطوات التالية:</p>
+                            <ol>
+                                <li>احفظ رمز الدفع الخاص بك</li>
+                                <li>توجه إلى أقرب منفذ فوري</li>
+                                <li>قم بإعطاء الرمز للموظف وادفع المبلغ المطلوب</li>
+                                <li>سيتم تفعيل اشتراكك تلقائياً بعد إتمام الدفع</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="fawry-code">
+                            <p>رمز الدفع الخاص بك:</p>
+                            <div class="code">FW95721368</div>
+                            <p class="note">صالح لمدة 48 ساعة</p>
+                        </div>
+                        
+                        <div class="total-section">
+                            <div class="total-label">المبلغ الإجمالي:</div>
+                            <div class="total-amount">500 جنيه مصري</div>
+                        </div>
+                        
+                        <div class="button-group">
+                            <button type="button" class="secondary-button" id="fawry-back-button">
+                                <i class="fas fa-arrow-right"></i> رجوع
+                            </button>
+                            <button class="cta-button pay-button">
+                                <i class="fas fa-print"></i> طباعة الرمز
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="secure-payment">
+                        <i class="fas fa-lock"></i>
+                        <p>جميع المعاملات مؤمنة ومشفرة</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <script src="payment.js"></script>
+</body>
+</html>
+

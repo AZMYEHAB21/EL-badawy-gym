@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="صالة البدوي الرياضية - المكان الأمثل لتحقيق أهدافك في اللياقة البدنية وبناء العضلات">
+    <meta name="keywords" content="صالة رياضية، لياقة بدنية، بناء عضلات، تدريب شخصي، البدوي">
+    <meta name="author" content="صالة البدوي">
+    <meta property="og:title" content="صالة البدوي الرياضية | EL Badawy Gym">
+    <meta property="og:description" content="المكان الأمثل لتحقيق أهدافك في اللياقة البدنية وبناء العضلات">
+    <meta property="og:image" content="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/شعار.jpg-Mq2kHk300sGDFESwj6xBhQgs70M28M.jpeg">
+    <meta property="og:url" content="https://elbadawy-gym.com">
+    <meta property="og:type" content="website">
+    <title>صالة البدوي الرياضية | EL Badawy Gym</title>
+    <link rel="icon" type="image/png" href="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%D9%85%D8%B3%D8%A7%D8%B1_%D8%A7%D9%84%D8%B5%D9%88%D8%B1%D8%A9.jpg-suMpIjKAbfdjFV5VA1jKdCuDk77gN9.jpeg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <div class="loader-content">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%D9%85%D8%B3%D8%A7%D8%B1_%D8%A7%D9%84%D8%B5%D9%88%D8%B1%D8%A9.jpg-suMpIjKAbfdjFV5VA1jKdCuDk77gN9.jpeg" alt="شعار صالة البدوي" width="80" height="80">
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/شعار.jpg-Mq2kHk300sGDFESwj6xBhQgs70M28M.jpeg" alt="شعار صالة البدوي" id="logo">
+                <span>صالة البدوي</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#about">عن الصالة</a></li>
+                <li><a href="#services">خدماتنا</a></li>
+                <li><a href="#gallery">معرض الصور</a></li>
+                <li><a href="#schedule">المواعيد</a></li>
+                <li><a href="#membership">العضوية</a></li>
+                <li><a href="#contact-location">اتصل بنا</a></li>
+                <li><a href="Login Page.html" class="login-button">تسجيل الدخول</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>اكتشف قوتك الحقيقية</h1>
+                <p>في صالة البدوي، نحن نؤمن بأن كل شخص لديه القدرة على تحقيق أهدافه البدنية</p>
+                <a href="#membership" class="cta-button">ابدأ رحلتك الآن</a>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>عن صالة البدوي</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>صالة البدوي هي أكثر من مجرد صالة رياضية. نحن مجتمع من الأفراد الملتزمين بتحسين صحتهم ولياقتهم. مع أحدث المعدات وفريق من المدربين ذوي الخبرة، نحن هنا لمساعدتك في تحقيق أهدافك، مهما كانت.</p>
+                    <p>تأسست صالة البدوي بهدف توفير بيئة تدريب احترافية ومحفزة لجميع المستويات، من المبتدئين وحتى المحترفين. نفخر بتقديم خدمات متميزة وبرامج تدريبية مخصصة تناسب احتياجات كل فرد.</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> معدات حديثة ومتطورة</li>
+                        <li><i class="fas fa-check"></i> مدربون محترفون</li>
+                        <li><i class="fas fa-check"></i> برامج تدريب مخصصة</li>
+                        <li><i class="fas fa-check"></i> أجواء ودية ومحفزة</li>
+                        <li><i class="fas fa-check"></i> متابعة مستمرة للتقدم</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="services">
+            <h2>خدماتنا</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-dumbbell"></i>
+                    <h3>تدريب القوة</h3>
+                    <p>برامج مخصصة لبناء العضلات وزيادة القوة باستخدام أحدث معدات رفع الأثقال.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3>تدريبات الكارديو</h3>
+                    <p>مجموعة متنوعة من أجهزة الكارديو لتحسين لياقة القلب والأوعية الدموية.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-user"></i>
+                    <h3>التدريب الشخصي</h3>
+                    <p>جلسات تدريب فردية مع مدربين محترفين لتحقيق أهدافك بسرعة وفعالية.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-weight"></i>
+                    <h3>إدارة الوزن</h3>
+                    <p>برامج شاملة لإنقاص الوزن تجمع بين التمارين والنصائح الغذائية.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <h2>معرض الصور</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20250129-WA0007.jpg-ZIdaFk4PCgKdflmrH6yFslQ7gayzSD.jpeg" alt="منطقة الكارديو مع إضاءة LED" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <h4>منطقة الكارديو</h4>
+                            <p>أحدث أجهزة الكارديو مع إضاءة LED</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20250129-WA0004.jpg-wBxWBEmbbQyXhSyVwq8hRQUrn60Oc9.jpeg" alt="منطقة التدريب بالأثقال" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <h4>منطقة التدريب بالأثقال</h4>
+                            <p>معدات متطورة لتدريب القوة</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20250129-WA0009.jpg-OXtcnb3FzzoOcHgzM5zd2nF6zeDtgh.jpeg" alt="أجهزة تدريب القوة" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <h4>أجهزة تدريب القوة</h4>
+                            <p>معدات احترافية لبناء العضلات</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20250129-WA0002.jpg-LUFU5KQDvPpG3jbHl7BPxoFKfOXK8M.jpeg" alt="أوزان البدوي المخصصة" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <h4>أوزان مخصصة</h4>
+                            <p>مجموعة متنوعة من الأوزان لجميع المستويات</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20250129-WA0003.jpg-PiOfuJJCKF3cpuVKghlvrTTVes0LFz.jpeg" alt="معدات التمارين المتنوعة" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <h4>معدات متنوعة</h4>
+                            <p>أجهزة متخصصة لتدريب جميع عضلات الجسم</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20250129-WA0006.jpg-YH2i3geQNfcINzEI4MDaFFWh3TUyiK.jpeg" alt="رف الدامبلز" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <h4>رف الدامبلز</h4>
+                            <p>مجموعة كاملة من الدامبلز بأوزان مختلفة</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20250129-WA0008.jpg-aONGz4bXLOL67OM3ogbE9p1MeEVk1Z.jpeg" alt="خزائن الملابس الحديثة" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <h4>خزائن الملابس</h4>
+                            <p>خزائن حديثة وآمنة لحفظ متعلقاتك</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20250129-WA0005.jpg-12pHbcVinEVr7x70GVXkIaY7rXeQNt.jpeg" alt="من  alt="منطقة التدريب المتكاملة" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <h4>منطقة التدريب المتكاملة</h4>
+                            <p>مساحة مثالية للتدريبات المتنوعة</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="schedule">
+            <h2>مواعيد العمل</h2>
+            <div class="schedule-grid">
+                <div class="schedule-card">
+                    <h3>الرجال</h3>
+                    <ul>
+                        <li><span>السبت - الخميس:</span> 6 صباحًا - 11 مساءً</li>
+                        <li><span>الجمعة:</span> 2 مساءً - 10 مساءً</li>
+                    </ul>
+                </div>
+                <div class="schedule-card">
+                    <h3>السيدات</h3>
+                    <ul>
+                        <li><span>السبت - الخميس:</span> 7 صباحًا - 9 مساءً</li>
+                        <li><span>الجمعة:</span> 3 مساءً - 9 مساءً</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="membership">
+            <h2>خطط العضوية</h2>
+            <div class="membership-grid">
+                <div class="membership-card" data-price="500" data-plan="الاشتراك الشهري">
+                    <h3>الاشتراك الشهري</h3>
+                    <p class="price">500 جنيه مصري</p>
+                    <ul>
+                        <li>دخول غير محدود</li>
+                        <li>استخدام جميع المعدات</li>
+                        <li>حصة تدريب شخصي مجانية</li>
+                    </ul>
+                    <button class="cta-button subscribe-btn">اشترك الآن</button>
+                </div>
+                <div class="membership-card" data-price="900" data-plan="اشتراك شهرين">
+                    <h3>اشتراك شهرين</h3>
+                    <p class="price">900 جنيه مصري</p>
+                    <ul>
+                        <li>دخول غير محدود</li>
+                        <li>استخدام جميع المعدات</li>
+                        <li>حصتان تدريب شخصي مجانية</li>
+                    </ul>
+                    <button class="cta-button subscribe-btn">اشترك الآن</button>
+                </div>
+                <div class="membership-card" data-price="1300" data-plan="اشتراك 3 أشهر">
+                    <h3>اشتراك 3 أشهر</h3>
+                    <p class="price">1300 جنيه مصري</p>
+                    <ul>
+                        <li>دخول غير محدود</li>
+                        <li>استخدام جميع المعدات</li>
+                        <li>3 حصص تدريب شخصي مجانية</li>
+                    </ul>
+                    <button class="cta-button subscribe-btn">اشترك الآن</button>
+                </div>
+                <div class="membership-card" data-price="2400" data-plan="اشتراك 6 أشهر">
+                    <h3>اشتراك 6 أشهر</h3>
+                    <p class="price">2400 جنيه مصري</p>
+                    <ul>
+                        <li>دخول غير محدود</li>
+                        <li>استخدام جميع المعدات</li>
+                        <li>6 حصص تدريب شخصي مجانية</li>
+                        <li>خصم 5% على المكملات الغذائية</li>
+                    </ul>
+                    <button class="cta-button subscribe-btn">اشترك الآن</button>
+                </div>
+                <div class="membership-card featured" data-price="4500" data-plan="الاشتراك السنوي">
+                    <div class="bg-pro">
+                        <div class="content">
+                            Pro
+                        </div>
+                    </div>
+                    <h3>الاشتراك السنوي</h3>
+                    <p class="price">4500 جنيه مصري</p>
+                    <ul>
+                        <li>دخول غير محدود</li>
+                        <li>استخدام جميع المعدات</li>
+                        <li>12 حصة تدريب شخصي مجانية</li>
+                        <li>خصم 10% على المكملات الغذائية</li>
+                        <li>جلسة تخطيط أهداف مجانية</li>
+                    </ul>
+                    <button class="cta-button subscribe-btn">اشترك الآن</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-location">
+            <h2>تواصل معنا وموقعنا</h2>
+            <div class="contact-location-container">
+                <div class="contact-form">
+                    <h3>أرسل لنا رسالة</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">الاسم</label>
+                            <input type="text" id="name" name="name" required>
+                            <span class="error-message" id="name-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-message" id="email-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">رقم الهاتف</label>
+                            <input type="tel" id="phone" name="phone" required>
+                            <span class="error-message" id="phone-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="inquiry">نوع الاستفسار</label>
+                            <select id="inquiry" name="inquiry" required>
+                                <option value="">اختر نوع الاستفسار</option>
+                                <option value="membership">الاشتراكات</option>
+                                <option value="personal">التدريب الشخصي</option>
+                                <option value="other">استفسار آخر</option>
+                            </select>
+                            <span class="error-message" id="inquiry-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">رسالتك</label>
+                            <textarea id="message" name="message" required></textarea>
+                            <span class="error-message" id="message-error"></span>
+                        </div>
+                        <button type="submit" class="cta-button">إرسال</button>
+                    </form>
+                </div>
+                <div class="contact-info-and-map">
+                    <div class="contact-info">
+                        <h3>معلومات الاتصال</h3>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> منية النصر شارع المستشقى العام اعى فرع شركة اتصالات برج النور الدور الاول علوي</li>
+                            <li><i class="fas fa-phone"></i> 01124444207</li>
+                            <li><i class="fas fa-envelope"></i> info@elbadawygym.com</li>
+                        </ul>
+                        <h3>تابعنا على</h3>
+                        <div class="social-icons">
+                            <a href="#" aria-label="فيسبوك"><i class="fab fa-facebook"></i></a>
+                            <a href="#" aria-label="انستغرام"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="يوتيوب"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3415.580051144751!2d31.64848522494682!3d31.121402066746043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f9d700683ff85b%3A0x40d945d9adf3b2c7!2z2KjYr9mI2Yog2KzZitmF!5e0!3m2!1sar!2seg!4v1738255078759!5m2!1sar!2seg" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="موقع صالة البدوي على الخريطة"></iframe>
+                        <a href="https://maps.app.goo.gl/MvXMA8KZfrbk8Z847" target="_blank" rel="noopener noreferrer" class="cta-button">احصل على الاتجاهات</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>عن صالة البدوي</h3>
+                <p>نحن ملتزمون بتوفير بيئة صحية ومحفزة لعملائنا لتحقيق أهدافهم في اللياقة البدنية.</p>
+            </div>
+            <div class="footer-section">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#services">خدماتنا</a></li>
+                    <li><a href="#membership">العضوية</a></li>
+                    <li><a href="#contact-location">اتصل بنا</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>تواصل معنا</h3>
+                <p><i class="fas fa-phone"></i> 01124444207</p>
+                <p><i class="fas fa-envelope"></i> info@elbadawygym.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 صالة البدوي الرياضية. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "Oxblyy4zqUxm6KvlA",
+            });
+        })();
+    </script>
+</body>
+</html>
