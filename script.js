@@ -86,42 +86,58 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Navigation functionality with improved animations
   const navSlide = () => {
-    const burger = document.querySelector(".burger")
-    const nav = document.querySelector(".nav-links")
-    const navLinks = document.querySelectorAll(".nav-links li")
-
+    const burger = document.querySelector(".burger");
+    const nav = document.querySelector(".nav-links");
+    const navLinks = document.querySelectorAll(".nav-links li");
+  
     burger.addEventListener("click", () => {
-      // Toggle Nav
-      nav.classList.toggle("nav-active")
-
-      // Animate Links with staggered delay
-      navLinks.forEach((link, index) => {
-        if (link.style.animation) {
-          link.style.animation = ""
-        } else {
-          link.style.animation = `fadeInRight 0.5s ease forwards ${index / 7 + 0.3}s`
-        }
-      })
-
-      // Burger Animation
-      burger.classList.toggle("toggle")
-    })
-
-    // Close mobile menu when clicking outside
+      // فتح وإغلاق القائمة
+      nav.classList.toggle("nav-active");
+      burger.classList.toggle("toggle");
+  
+      // إعادة تشغيل الأنيميشن عند الفتح
+      if (nav.classList.contains("nav-active")) {
+        navLinks.forEach((link, index) => {
+          link.style.opacity = "1"; // تأكد من أن العناصر مرئية
+          link.style.animation = `fadeInRight 0.5s ease forwards ${index / 7 + 0.3}s`;
+        });
+      }
+    });
+  
+    // عند الضغط على أي عنصر داخل القائمة، يتم إغلاقها بدون إخفاء العناصر
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("nav-active");
+        burger.classList.remove("toggle");
+  
+        // لا تخفي العناصر، فقط أغلق القائمة
+        setTimeout(() => {
+          navLinks.forEach((link) => {
+            link.style.opacity = "1"; // تأكد أنها مرئية دائمًا
+          });
+        }, 300);
+      });
+    });
+  
+    // إغلاق القائمة عند الضغط خارجها
     document.addEventListener("click", (e) => {
       if (nav.classList.contains("nav-active") && !nav.contains(e.target) && !burger.contains(e.target)) {
-        nav.classList.remove("nav-active")
-        burger.classList.remove("toggle")
-
-        navLinks.forEach((link) => {
-          link.style.animation = ""
-        })
+        nav.classList.remove("nav-active");
+        burger.classList.remove("toggle");
+  
+        // لا تخفي العناصر عند الإغلاق
+        setTimeout(() => {
+          navLinks.forEach((link) => {
+            link.style.opacity = "1";
+          });
+        }, 300);
       }
-    })
-  }
-
-  navSlide()
-
+    });
+  };
+  
+  // تشغيل الدالة عند تحميل الصفحة
+  navSlide();
+  
   // Header scroll effect with enhanced animation
   const header = document.querySelector("header")
   const backToTopButton = document.getElementById("back-to-top")
@@ -1262,4 +1278,3 @@ function setupImageDownload() {
 }
 
 document.addEventListener("DOMContentLoaded", setupImageDownload)
-
